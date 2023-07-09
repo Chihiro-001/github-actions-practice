@@ -3,11 +3,11 @@ name: hello world workflow
 on:
   # workflow to be triggered when you push to the main branch
   push: 
-    baranches:
+    branches:
       - main
   # workflow to be triggered when you pull request to the main branch
   pull_request:
-    baranches:  
+    branches:  
       - main
   # give you a button that you can click on in the UI to run this workflow without having to push changes to your repo.
   workflow_dispatch:
