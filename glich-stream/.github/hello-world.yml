@@ -1,0 +1,32 @@
+name: hello world workflow
+
+on:
+  # workflow to be triggered when you push to the main branch
+  push: 
+    baranches:
+      - main
+  # workflow to be triggered when you pull request to the main branch
+  pull_request:
+    baranches:  
+      - main
+  # give you a button that you can click on in the UI to run this workflow without having to push changes to your repo.
+  workflow_dispatch:
+
+jobs:
+  # job 1
+  hello:
+    # ubuntu-latest is set to 22.04 which cannot run on this workflow.
+    runs-on: ubuntu-20.04
+    steps: 
+      # Github Actions community action - clone your repo and run it in your workflow
+      - uses: actions/checkout@v3
+      - name: hello world
+        run: echo "Hello world"
+        shell: bash
+  # job 2
+  goodbye:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: goodbye world
+        run: echo "Good bye world"
+        shell: bash
