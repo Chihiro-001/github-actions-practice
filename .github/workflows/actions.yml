@@ -4,10 +4,20 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files
+      - name: List Files before checkout
         run: |
           pwd
-          ls
+          ls -a
+          
+      - name: Checkout
+        # use "checkout" to access repositories
+        uses: actions/checkout@v3
+
+      - name: List Files after checkout
+        run: |
+          pwd
+          ls -a
+
       - name: Simple JS Action
         id: greet
       # you can specify actions. After "@", you can spefify the version, branch, or commit.
@@ -15,5 +25,10 @@ jobs:
         with:
           who-to-greet: John
 
+      # - name: Log Greeting Time
+      #   run: echo "${{ steps.greet.output.time }}"
+      # save-state and set-output workflow commands are deprecated
+      - name: Save state
+        run: echo "{time}=${{steps.greet.outputs.time}}" >> $GITHUB_ENV
       - name: Log Greeting Time
-        run: echo "${{ steps.greet.output.time }}"
+        run: echo ${{ env.time }}
