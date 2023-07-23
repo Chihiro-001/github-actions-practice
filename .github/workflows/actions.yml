@@ -4,6 +4,10 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls
       - name: Simple JS Action
         id: greet
       # you can specify actions. After "@", you can spefify the version, branch, or commit.
