@@ -6,7 +6,7 @@ on: [push]
 
 # jobs to run
 jobs: 
-# the name of the job
+# the name of the job - 1
   run-shell-command: 
     runs-on: ubuntu-latest
     # the steps for this specific job to run
@@ -23,3 +23,13 @@ jobs:
           print
           (platform.processor())
         shell: python
+
+  # the name of the job -2
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
