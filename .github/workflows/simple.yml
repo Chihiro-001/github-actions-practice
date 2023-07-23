@@ -1,10 +1,15 @@
+# The name of this workflow
 name: Shell Commands
 
+# build trigger(s)
 on: [push]
 
+# jobs to run
 jobs: 
+# the name of the job
   run-shell-command: 
     runs-on: ubuntu-latest
+    # the steps for this specific job to run
     steps: 
       - name: echo a string
         run: echo "Hello World"
