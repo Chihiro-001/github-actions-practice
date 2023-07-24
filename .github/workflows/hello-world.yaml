@@ -2,9 +2,9 @@ name: hello world workflow
 
 on:
   # workflow to be triggered when you push to the main branch
-  push: 
-    branches:
-      - main
+  # push: 
+  #   branches:
+  #     - main
   # workflow to be triggered when you pull request to the main branch
   pull_request:
     branches:  
