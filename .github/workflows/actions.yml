@@ -1,6 +1,8 @@
 name: Actions Workflow
 # on: [push]
 on: 
+  repository_dispatch:
+    types: [build]
   # schedule:
   # cron job runs at every minute
     # - cron: "0/5 * * * *"
@@ -11,6 +13,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: payload
+        runs-on: echo ${{ github.event.client_payload.env }}
       - name: List Files before checkout
         run: |
           pwd
