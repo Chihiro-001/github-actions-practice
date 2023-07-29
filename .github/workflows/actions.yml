@@ -1,6 +1,7 @@
 name: Actions Workflow
 # on: [push]
 on: 
+# use Postman to see the following result
   repository_dispatch:
     types: [build]
   # schedule:
