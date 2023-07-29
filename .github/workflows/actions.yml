@@ -38,7 +38,7 @@ jobs:
 
       - name: Simple JS Action
         id: greet
-      # you can specify actions. After "@", you can spefify the version, branch, or commit.
+      # you can specify actions. After "@", you can specify the version, branch, or commit.
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: John
