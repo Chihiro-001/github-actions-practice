@@ -10,20 +10,20 @@ jobs:
       - name: log node version
         run: node -v
       - name: Step with docker
-        uses: docker://node:12.14.1-alpine3.10
+        uses: docker://node:13.5.0-alpine3.10
         with:
           entrypoint: "/bin/echo"
           args: "Hello World"
       - name: Log node version
-        uses: docker://node:12.14.1-alpine3.10
+        uses: docker://node:13.5.0-alpine3.10
         with:
           entrypoint: /usr/local/bin/node
           args: -v
       - uses: actions/checkout@v3
       - name: Run a script
-        uses: docker://node:12.14.1-alpine3.10
+        uses: docker://node:13.5.0-alpine3.10
         with:
-          entrypoint: ./script.sh
+          entrypoint: /Users/chihiro/Documents/01_code/youtube/github-actions/script.sh
           args: "Some string"
       - name: send a Slack message
         uses: docker://technosophos/slack-notify
