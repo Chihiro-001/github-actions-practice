@@ -49,7 +49,7 @@ jobs:
         run: |
           apk add --no-cache curl
       - name: Post a user
-        run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "hello","address": "123 st"}'''
+        run: 'curl -X POST http://app:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "hello","address": "123 st"}'''
       - name: Get users
-        run: curl http://localhost:3001/api/users 
+        run: curl http://app:3001/api/users 
         
