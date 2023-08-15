@@ -6,9 +6,9 @@ on:
   #   branches:
   #     - main
   # workflow to be triggered when you pull request to the main branch
-  pull_request:
-    branches:  
-      - main
+  # pull_request:
+  #   branches:  
+  #     - main
   # give you a button that you can click on in the UI to run this workflow without having to push changes to your repo.
   workflow_dispatch:
 
