@@ -2,7 +2,7 @@
 name: Shell Commands
 
 # build trigger(s)
-on: [pull_request]
+on: workflow_dispatch
 
 # jobs to run
 jobs: 
