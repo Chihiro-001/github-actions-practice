@@ -1,4 +1,4 @@
 * @Chihiro-001
 *.js @Chihiro-001
-*.yml @Chihiro-001
+*.yml @chi-mock
 /public/ @Chihiro-001
