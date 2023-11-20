@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps: 
       # Github Actions community action - clone your repo and run it in your workflow
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: hello world
         run: echo "Hello world"
         shell: bash
